@@ -11,7 +11,7 @@ const passportJWT = require('passport-jwt');
 const HTTP_PORT = process.env.PORT || 8080;
 
 let ExtractJwt = passportJWT.ExtractJwt;
-let JwtSrategy = passportJWT.Strategy;
+let JwtStrategy = passportJWT.Strategy;
 let jwtOptions = {};
 jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme('jwt');
 jwtOptions.secretOrKey = process.env.JWT_SECRET
